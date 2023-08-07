@@ -15,7 +15,7 @@ public interface FrameworkConstants {
 	String FIREFOX_KEY="webdriver.gecko.driver";
 	String FIREFOX_PATH="./src/main/resources/Drivers/geckodriver.exe";
 	
-	String EXCEL_PATH = "./src/test/resources/TestData/testData.xlsx";
+	String EXCEL_PATH = "./src/test/resources/TestData/OFOS_Register_Data.xlsx";
 	
 	String PROPERTIES_PATH = "./src/test/resources/PropertyFile/data.properties";
 	
@@ -23,8 +23,8 @@ public interface FrameworkConstants {
 	
 	String REPORTS_PATH="./Reports/";
 	
-	String TEST_NAME="ExtentDemo";
+	//String TEST_NAME="ExtentDemo";
 	
-	long TIMEOUTS_WAIT= 20;
+	long TIMEOUTS_WAIT= 30;
 
 }

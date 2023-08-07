@@ -109,6 +109,20 @@ public class UtilityMethods implements FrameworkConstants  {
 		return "."+imgPath;
 	}
 	
+	public String getWebelementScreenshot(WebElement element)  {
+		
+		String imagePath = SCREENSHOT_PATH+name()+".png";
+		File src = element.getScreenshotAs(OutputType.FILE);
+		File dest = new File(imagePath);
+		try {
+			FileHandler.copy(src, dest);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "."+imagePath;
+	}
+	
 	/**
 	 * This method read the properties and return the value based on key
 	 * @param key
