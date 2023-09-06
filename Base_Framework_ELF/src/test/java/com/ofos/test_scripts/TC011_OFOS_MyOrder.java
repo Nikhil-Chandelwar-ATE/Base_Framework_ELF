@@ -62,6 +62,5 @@ public class TC011_OFOS_MyOrder extends Base_Test {
 			test.log(LogStatus.FAIL, "Paypal radio button is disabled");
 			test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
 		}
-		driver.quit();
 	}
 }

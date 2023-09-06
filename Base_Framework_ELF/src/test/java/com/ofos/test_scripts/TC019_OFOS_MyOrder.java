@@ -23,6 +23,5 @@ public class TC019_OFOS_MyOrder extends Base_Test {
 		
 		test.log(LogStatus.FAIL, "No restaurant found");
 		test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
-		driver.quit();
 	}
 }

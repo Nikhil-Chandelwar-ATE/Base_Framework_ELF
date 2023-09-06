@@ -28,26 +28,37 @@ public class TC001_OFOS_Register extends Base_Test{
 		Welcome_Page wp = new Welcome_Page(driver);
 		Assert.assertEquals(wp.getOfosLogo().isDisplayed(), true);
 		
+		Assert.assertEquals(wp.getRegisterLink().isDisplayed(), true);
 		clickAction(wp.getRegisterLink());
 		Assert.assertEquals(wp.getOfosLogo().isDisplayed(), true);
 		
 		Register_Page rp = new Register_Page(driver);
+		
+		Assert.assertEquals(rp.getUsernameTextField().isDisplayed(), true);
 		enter_value(rp.getUsernameTextField(), usn);
 		//System.out.println(usn);
+		Assert.assertEquals(rp.getFirstnameTextField().isDisplayed(), true);
 		enter_value(rp.getFirstnameTextField(), fname);
 		//System.out.println(fname);
+		Assert.assertEquals(rp.getLastnameTextField().isDisplayed(), true);
 		enter_value(rp.getLastnameTextField(), lname);
 		//System.out.println(lname);
+		Assert.assertEquals(rp.getEmailTextField().isDisplayed(), true);
 		enter_value(rp.getEmailTextField(), email);
 		//System.out.println(email);
+		Assert.assertEquals(rp.getPhoneTextField().isDisplayed(), true);
 		enter_value(rp.getPhoneTextField(), phone);
 		//System.out.println(phone);
+		Assert.assertEquals(rp.getPasswordTextField().isDisplayed(), true);
 		enter_value(rp.getPasswordTextField(), pwd);
 		//System.out.println(pwd);
+		Assert.assertEquals(rp.getConfirmPasswordTextField().isDisplayed(), true);
 		enter_value(rp.getConfirmPasswordTextField(), cpwd);
 		//System.out.println(cpwd);
+		Assert.assertEquals(rp.getDeliveryAddressTextField().isDisplayed(), true);
 		enter_value(rp.getDeliveryAddressTextField(), address);
 		//System.out.println(address);
+		Assert.assertEquals(rp.getSubmitButton().isEnabled(), true);
 		clickAction(rp.getSubmitButton());
 		
 		try {
@@ -61,6 +72,5 @@ public class TC001_OFOS_Register extends Base_Test{
 			test.log(LogStatus.PASS, test.addScreenCapture(getPhoto(driver)));
 		}
 		Thread.sleep(2000);
-		driver.quit();
 	}
 }

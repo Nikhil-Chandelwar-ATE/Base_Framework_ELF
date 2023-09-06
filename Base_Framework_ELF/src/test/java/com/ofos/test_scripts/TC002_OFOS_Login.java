@@ -3,12 +3,12 @@ package com.ofos.test_scripts;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.ofos.pom_classes.Home_Page;
 import com.ofos.pom_classes.Login_Page;
 import com.ofos.pom_classes.Welcome_Page;
 import com.relevantcodes.extentreports.LogStatus;
 
 import generic.Base_Test;
-import pom_Classes.Home_Page;
 
 public class TC002_OFOS_Login extends Base_Test{
 
@@ -19,26 +19,30 @@ public class TC002_OFOS_Login extends Base_Test{
 		Welcome_Page wp = new Welcome_Page(driver);
 		Assert.assertEquals(wp.getOfosLogo().isDisplayed(), true);
 		
+		Assert.assertEquals(wp.getLoginLink().isDisplayed(), true);
 		clickAction(wp.getLoginLink());
 		Login_Page lp = new Login_Page(driver);
 		Assert.assertEquals(wp.getOfosLogo().isDisplayed(), true);
 		
 		try {
+			Assert.assertEquals(lp.getUsernameTextField().isDisplayed(), true);
 			enter_value(lp.getUsernameTextField(), getValueProperty("email"));
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
+			Assert.assertEquals(lp.getPasswordTextField().isDisplayed(), true);
 			enter_value(lp.getPasswordTextField(), getValueProperty("password"));
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Assert.assertEquals(lp.getLoginButton().isDisplayed(), true);
 		clickAction(lp.getLoginButton());
 		Thread.sleep(2000);
 		Home_Page hp = new Home_Page(driver);
-		//Assert.assertEquals(hp.getLogoutLink().isDisplayed(), true);
+		Assert.assertEquals(hp.getLogoutLink().isDisplayed(), true);
 		test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
 		test.log(LogStatus.PASS, "User is logged in successfully");
 		

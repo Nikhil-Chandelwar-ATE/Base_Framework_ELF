@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ofos.test_scripts.TC015_OFOS_MyOrder">
+      <class name="com.ofos.test_scripts.TC002_OFOS_Login">
         <methods>
           <include name="setup"/>
           <include name="beforeSuit"/>
-          <include name="placeOrderFromAmericanRestaurant"/>
           <include name="afterSuite"/>
           <include name="CloseApp"/>
           <include name="browserSetup"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.ofos.test_scripts.TC015_OFOS_MyOrder -->
+      </class> <!-- com.ofos.test_scripts.TC002_OFOS_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

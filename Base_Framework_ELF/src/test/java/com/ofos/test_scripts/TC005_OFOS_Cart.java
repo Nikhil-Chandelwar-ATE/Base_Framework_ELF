@@ -22,7 +22,5 @@ public class TC005_OFOS_Cart extends Base_Test{
 		test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
 		test.log(LogStatus.PASS, "Dish is removed successfully from cart.");
 		Thread.sleep(2000);
-		
-		driver.quit();
 	}
 }

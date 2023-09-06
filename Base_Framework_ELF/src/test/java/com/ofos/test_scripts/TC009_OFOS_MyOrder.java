@@ -67,7 +67,5 @@ public class TC009_OFOS_MyOrder extends Base_Test{
 		} catch (Exception e) {
 			test.log(LogStatus.FAIL, "Not able to delete placed order");
 		}
-
-		driver.quit();
 	}
 }

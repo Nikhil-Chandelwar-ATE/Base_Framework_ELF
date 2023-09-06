@@ -35,5 +35,4 @@ public class TC003_OFOS_Cart extends Base_Test{
 		test.log(LogStatus.INFO, rp.getCartDeatils().getText());
 		test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
 	}
-	
 }

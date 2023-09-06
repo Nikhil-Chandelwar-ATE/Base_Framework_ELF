@@ -54,7 +54,7 @@ public class UtilityMethods implements FrameworkConstants  {
 	
 	public String get_title() {
 		String title= driver.getTitle();
-		 return title;
+		return title;
 	}
 
 	public String get_url() {		
@@ -70,7 +70,6 @@ public class UtilityMethods implements FrameworkConstants  {
 		TextField.sendKeys(value);
 	}
 
-	
 	public void switchToASpecificTitledWindow(String title) { 
 		String parentWindowId = driver.getWindowHandle(); 
 

@@ -66,6 +66,5 @@ public class TC008_OFOS_MyOrder extends Base_Test{
 			test.log(LogStatus.FAIL, "Dispatch button is not working.");
 		}
 		Thread.sleep(2000);
-		driver.quit();
 	}
 }

@@ -22,7 +22,7 @@ public class Home_Page extends Base_Page{
 		this.myOrdersLink = myOrdersLink;
 	}
 
-	@FindBy(partialLinkText = "Logout")
+	@FindBy(xpath = "//a[text()='Logout']")
 	private WebElement logoutLink;
 
 	public WebElement getLogoutLink() {

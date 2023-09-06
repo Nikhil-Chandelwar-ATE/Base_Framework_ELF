@@ -69,7 +69,7 @@ public class Base_Test extends UtilityMethods{
 
 	@AfterClass(alwaysRun=true)
 	public void CloseApp() {
-		//driver.quit();
+		driver.quit();
 		//test.log(LogStatus.INFO, "End Test");
 	}
 	

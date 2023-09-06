@@ -32,6 +32,5 @@ public class TC012_OFOS_MyOrder extends Base_Test{
 		Thread.sleep(2000);
 		test.log(LogStatus.INFO, test.addScreenCapture(getPhoto(driver)));
 		test.log(LogStatus.FAIL, "No dishes found");
-		driver.quit();
 	}
 }

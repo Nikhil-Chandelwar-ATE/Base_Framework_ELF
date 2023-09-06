@@ -56,6 +56,5 @@ public class TC006_OFOS_MyOrders extends Base_Test{
 		
 		test.log(LogStatus.PASS, test.addScreenCapture(getPhoto(driver)));
 		Thread.sleep(2000);
-		driver.quit();
 	}
 }
